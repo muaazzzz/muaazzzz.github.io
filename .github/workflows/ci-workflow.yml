@@ -6,6 +6,9 @@ on:
   pull_request:
     branches: [ master ]
 
+permissions:
+  contents: read
+
 jobs:
   build-test:
     name: Build and Test
@@ -50,6 +53,8 @@ jobs:
     runs-on: ubuntu-22.04
     needs: [ build-test, ci-skip ]
     if: github.ref == 'refs/heads/master' && github.repository_owner == 'sproogen' && needs.ci-skip.outputs.skip == 'false'
+    permissions:
+      contents: write
     steps:
     - uses: actions/checkout@v4
       with:
