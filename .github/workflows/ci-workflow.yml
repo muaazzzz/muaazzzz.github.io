@@ -9,7 +9,7 @@ on:
 jobs:
   build-test:
     name: Build and Test
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
     - uses: actions/checkout@v4
     - name: Set up Ruby
@@ -17,7 +17,7 @@ jobs:
     # change this to (see https://github.com/ruby/setup-ruby#versioning):
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: 3.1
+        ruby-version: 2.6
         bundler-cache: true
     - name: Install dependencies
       run: |
@@ -33,7 +33,7 @@ jobs:
         bundle exec htmlproofer ./_test-site-2 --disable-external
 
   ci-skip:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     outputs:
       skip: ${{ steps.ci-skip-step.outputs.ci-skip }}
     steps:
@@ -47,7 +47,7 @@ jobs:
 
   bump-version-deploy:
     name: Bump Version and Deploy
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     needs: [ build-test, ci-skip ]
     if: github.ref == 'refs/heads/master' && github.repository_owner == 'sproogen' && needs.ci-skip.outputs.skip == 'false'
     steps:
@@ -60,7 +60,7 @@ jobs:
     # change this to (see https://github.com/ruby/setup-ruby#versioning):
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: 3.1
+        ruby-version: 2.6
         bundler-cache: true
     - name: Install dependencies
       run: |
