@@ -6,24 +6,22 @@ on:
   pull_request:
     branches: [ master ]
 
+permissions:
+  contents: read
+
 jobs:
   build-test:
     name: Build and Test
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     - name: Set up Ruby
     # To automatically get bug fixes and new Ruby versions for ruby/setup-ruby,
     # change this to (see https://github.com/ruby/setup-ruby#versioning):
       uses: ruby/setup-ruby@v1
       with:
         ruby-version: 2.6
-    - uses: actions/cache@v2
-      with:
-        path: vendor/bundle
-        key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
-        restore-keys: |
-          ${{ runner.os }}-gems-
+        bundler-cache: true
     - name: Install dependencies
       run: |
         bundle config path vendor/bundle
@@ -38,11 +36,11 @@ jobs:
         bundle exec htmlproofer ./_test-site-2 --disable-external
 
   ci-skip:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     outputs:
       skip: ${{ steps.ci-skip-step.outputs.ci-skip }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
       - id: ci-skip-step
@@ -52,11 +50,13 @@ jobs:
 
   bump-version-deploy:
     name: Bump Version and Deploy
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     needs: [ build-test, ci-skip ]
     if: github.ref == 'refs/heads/master' && github.repository_owner == 'sproogen' && needs.ci-skip.outputs.skip == 'false'
+    permissions:
+      contents: write
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
       with:
         fetch-depth: 0
         token: ${{ secrets.ADMIN_TOKEN }}
@@ -66,12 +66,7 @@ jobs:
       uses: ruby/setup-ruby@v1
       with:
         ruby-version: 2.6
-    - uses: actions/cache@v2
-      with:
-        path: vendor/bundle
-        key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
-        restore-keys: |
-          ${{ runner.os }}-gems-
+        bundler-cache: true
     - name: Install dependencies
       run: |
         bundle config path vendor/bundle
