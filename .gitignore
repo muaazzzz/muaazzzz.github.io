@@ -2,5 +2,6 @@
 .bundle
 .sass-cache
 _site
+_test-site-*
 *.code-workspace
 vendor
