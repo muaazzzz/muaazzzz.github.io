@@ -1,140 +1,118 @@
 # Site
-repository: Git repository where your resume will be hosted, only required if you are hosting on GitHub (eg. sproogen/modern-resume-theme)
-# favicon: Directory of your favicon (eg. images/favicon.ico)(optional)
-
-# Content configuration version
-version: 2
+repository: muaazzzz/muaazzzz.github.io
+favicon: images/favicon.ico
 
 # Personal info
-name: Your Name
-title: Your job title
-email: Your email (optional)
-# email_title: Email (Email title override)
-phone: Your phone number (optional)
-# phone_title: Phone (Phone title override)
-website: Your website (eg. https://google.com)(optional)
-# website_title: Web (Website title override)
-
-# Dark Mode (true/false/never)
-darkmode: false
+name: Muhammad Muaaz Saeed
+title: CS Student @ LUMS | AI/ML & Full-Stack Developer
+email: muaaz.saeed777@gmail.com
+phone: +92 300 9432160
+website: https://muaazzzz.github.io
 
 # Social links
-twitter_username: jekyllrb
-github_username:  jekyll
-stackoverflow_username: "00000001"
-dribbble_username: jekyll
-facebook_username: jekyll
-flickr_username: jekyll
-instagram_username: jekyll
-linkedin_username: jekyll
-xing_username: jekyll
-pinterest_username: jekyll
-youtube_username: jekyll
-orcid_username: 0000-0000-0000-0000
-googlescholar_username: D847cGsAAAAJ
-
-# Additional icon links
-additional_links:
-- title: Link name
-  icon: Font Awesome brand icon name (eg. fab fa-twitter) (https://fontawesome.com/icons?d=gallery&s=brands&m=free)
-  url: Link url (eg. https://google.com)
-# - title: another link
-#   icon: font awesome brand icon name (eg. fab fa-twitter) (https://fontawesome.com/icons?d=gallery&s=brands&m=free)
-#   url: Link url (eg. https://google.com)
-
-# Google Analytics and Tag Manager
-# Using more than one of these may cause issues with reporting
-# gtm: "GTM-0000000"
-# gtag: "UA-00000000-0"
-# google_analytics: "UA-00000000-0"
+linkedin_username: muaaz-saeed       # your actual LinkedIn handle
+github_username: muaazzzz
 
 # About Section
-# about_title: About Me (Use this to override about section title)
-about_profile_image: Directory of profile image (eg. images/profile.jpg)
-about_content: | # this will include new lines to allow paragraphs
-  Write an awesome description about yourself here, this supports markdown, so you can add [links](http://foobar.com) and highlight things <mark>like this</mark>.
-
-  You can even add paragraphs by using empty lines like this and add anything else [markdown](https://www.markdownguide.org/getting-started#what-is-markdown) supports such as
-    - Lists
-    - Tables
-    - <a href="google.com">Links</a>
-    - Images ![alt text](/images/landscape-trees.jpg "Trees")
+about_profile_image: images/profile.jpg
+about_content: |
+  I am a final-year BS Computer Science student at LUMS with hands-on experience 
+  in AI/ML, full-stack development, and automation. I specialize in building 
+  agentic RAG systems, scalable data pipelines, and end-to-end web applications. 
+  Currently working as a TA for Advanced Programming and freelancing as an 
+  AI Automation Developer.
 
 content:
-  - title: Projects # Title for the section
-    layout: list # Type of content section (list/text)
-    content:
-      - layout: left
-        border: weak  # Value of `weak` will display a weak border below this item. # Any 
-                      # other value (or no value) means no border will be displayed
-        title: Project name
-        link: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-        link_text: Link Text
-        additional_links:
-          - title:  Github page for project (eg. sproogen/modern-resume-theme)
-            icon: fab fa-github
-            url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-          - title:  Github page for project (eg. sproogen/modern-resume-theme)
-            icon: fab fa-github
-            url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-        quote: >
-          Short overview of the project (optional)
-        description: | # this will include new lines to allow paragraphs
-          Description about the work on/with the project
-  - title: Experience
-    layout: list
-    content:
-      - layout: right
-        title: Company name
-        sub_title: Job title
-        caption: Date Range (eg. November 2016 - present)
-        link: Link to company (optional)
-        quote: >
-          Short description of the company (optional)
-        description: | # this will include new lines to allow paragraphs
-          Description of role
+  # Education
   - title: Education
     layout: list
     content:
-      - layout: top-right
-        title: Institution name
-        sub_title: Qualifications (eg. BA Performing Arts)
-        caption: Date Range (eg. 2016 - 2019)
-        quote: >
-          Short institution or course description (optional)
-        description: | # this will include new lines to allow paragraphs
-          Description of qualification
-  - title: A Little More About Me
-    layout: text
-    content: | # this will include new lines to allow paragraphs
-      This is where you can write a little more about yourself. You could title this section **Interests** and include some of your other interests.
+      - layout: left
+        title: Lahore University of Management Sciences (LUMS)
+        caption: 2022 – 2026
+        sub_title: BS Computer Science
+        description: |
+          Key Courses: OOP, Data Structures, Network Centric Computing, Machine Learning, 
+          NLP, Deep Learning, Operating Systems, Adv. Programming, Software Engineering, 
+          MLOps, Applied Probability
 
-      Or you could title it **Skills** and write a bit more about things that make you more desirable, like *leadership* or *teamwork*
+      - layout: left
+        title: LGS Defense
+        caption: 2020 – 2022
+        sub_title: A Levels
+        description: |
+          Awarded 100% Merit Scholarship | SAT 1470 (99th Percentile)
+
+  # Experience
+  - title: Experience
+    layout: list
+    content:
+      - layout: left
+        title: LUMS
+        sub_title: Teaching Assistant – Advanced Programming
+        caption: Jan 2026 – Present
+        description: |
+          - Facilitated a programming-intensive curriculum covering Functional (Haskell), 
+            Event-Driven (TypeScript) paradigms, and MERN App Development.
+          - Guided students through complex problem-solving, grading weekly assessments 
+            to strengthen system design understanding.
+
+      - layout: left
+        title: Self-Employed
+        sub_title: AI Automation / Agent Developer (Freelance)
+        caption: April 2025 – Present
+        description: |
+          - Automated end-to-end lead generation workflows using n8n, Make, Airtable, and Zapier.
+          - Built Airtable CRM schemas to centralize and score leads with automated notifications.
+          - Integrated Zapier to sync data with Slack/SMS, halving agent response times.
+
+  # Projects
+  - title: Projects
+    layout: list
+    content:
+      - layout: top-middle
+        title: Pakistani Legal Chatbot
+        link: https://your-live-site-link.com
+        link_text: Live Site
+        additional_links:
+          - title: Walk-through Video
+            icon: fab fa-youtube
+            url: https://your-video-link.com
+        description: |
+          MERN · FastAPI · Neo4j · Docker · LangGraph | Sept 2025 – Present
+          - Architected a context-aware RAG pipeline using LangGraph and Neo4j.
+          - Containerized as a FastAPI microservice with CI/CD pipelines.
+          - Secured with RBAC, STRIDE framework, and SonarQube vulnerability analysis.
+
+      - layout: top-middle
+        title: Scalable Agentic RAG Platform
+        description: |
+          Databricks · Spark · MLflow · LangChain | Spring 2026
+          - Engineered high-throughput ETL pipelines with Apache Spark and Delta Live Tables.
+          - Architected a Multi-Agent System with centralized LLM reasoning and sub-task delegation.
+          - Deployed via MLflow with a full LLMOps monitoring loop.
+
+      - layout: top-middle
+        title: Deep Learning, ML & NLP Projects
+        description: |
+          Python · PyTorch · Transformers | Jan 2024 – Present
+          - Trained and fine-tuned Transformer and Diffusion architectures for NLP and CV tasks.
+          - Built classification pipelines achieving >95% accuracy; developed a medical QA RAG chatbot.
+
+      - layout: top-middle
+        title: UniTrade – LUMS Marketplace
+        description: |
+          MERN Stack · Socket.IO · Gemini AI | April 2025
+          - Built React components for listings with image uploads, tagging, and Voice Search.
+          - Leveraged Gemini vision models for auto-generated product descriptions.
+
+  # Skills
+  - title: Technical Skills
+    layout: text
+    content: |
+      **Languages:** C++, C, Python, SQL, TypeScript, JavaScript, Haskell, HTML5  
+      **Frameworks:** React.js, Express, FastAPI, LangGraph, PyTorch, Scikit-learn, Pandas, n8n, Spark  
+      **Tools:** Docker, Neo4j, MongoDB, Git, Postman, SonarQube, Databricks  
 
 # Footer
 footer_show_references: true
-# references_title: References on request (Override references text)
-
-# Build settings
-# theme: modern-resume-theme (Use this is you are hosting your resume yourself)
-# remote_theme: sproogen/modern-resume-theme (Use this if you are hosting your resume on GitHub)
-
-sass:
-  sass_dir: _sass
-  style: compressed
-
-plugins:
- - jekyll-seo-tag
-
-exclude : [
-  "Gemfile",
-  "Gemfile.lock",
-  "node_modules",
-  "vendor/bundle/",
-  "vendor/cache/",
-  "vendor/gems/",
-  "vendor/ruby/",
-  "lib/",
-  "scripts/",
-  "docker-compose.yml",
-  ]
