@@ -2,6 +2,7 @@
 repository: muaazzzz/muaazzzz.github.io
 favicon: images/favicon.ico
 version: 2
+darkmode: true
 
 # Personal info
 name: Muhammad Muaaz Saeed
@@ -15,7 +16,7 @@ linkedin_username: muaaz-saeed       # your actual LinkedIn handle
 github_username: muaazzzz
 
 # About Section
-about_profile_image: images/profile.jpg
+about_profile_image: false
 about_content: |
   I am a final-year BS Computer Science student at LUMS with hands-on experience 
   in AI/ML, full-stack development, and automation. I specialize in building 
